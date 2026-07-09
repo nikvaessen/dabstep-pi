@@ -1,0 +1,6 @@
+# OpenRouter model ids for dev benchmarking.
+# Optional second column: comma-separated thinking modes for this model.
+# Checked against https://openrouter.ai/api/v1/models.
+
+# Selected model for the toy dev experiment.
+deepseek/deepseek-v4-pro off,xhigh

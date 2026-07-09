@@ -1,0 +1,24 @@
+FROM node:24-bookworm-slim
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+    bash \
+    ca-certificates \
+    git \
+    ripgrep \
+    findutils \
+    python3 \
+    python3-pip \
+    python3-venv \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN npm install -g --ignore-scripts @earendil-works/pi-coding-agent
+
+RUN python3 -m venv /opt/venv \
+  && /opt/venv/bin/pip install --no-cache-dir --upgrade pip \
+  && /opt/venv/bin/pip install --no-cache-dir pandas numpy pyarrow
+
+ENV PATH="/opt/venv/bin:${PATH}"
+
+WORKDIR /workspace
+CMD ["pi"]

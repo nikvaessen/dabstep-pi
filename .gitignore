@@ -1,0 +1,33 @@
+# Data and benchmark outputs
+/data/
+/runs/
+/.pi-task-work/
+
+# Local secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak

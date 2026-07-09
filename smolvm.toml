@@ -1,0 +1,10 @@
+image = "./.pi-task-work/dabstep-pi.tar"
+workdir = "/"
+cpus = 1
+memory = 1024
+
+[network]
+allow_hosts = ["openrouter.ai"]
+
+[secrets]
+OPENROUTER_API_KEY = { from_env = "OPENROUTER_API_KEY" }
